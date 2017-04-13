@@ -1,0 +1,71 @@
+<div class="_content" ng-controller="posteditCtrl">
+  <div class="_content--in">
+
+    <div class="_headerelement">
+      <h3>ویرایش</h3>
+    </div>
+
+    <div class="_form">
+      <form ng-submit="edit()">
+
+        <div class="_formitem">
+          <label class="_label">عنوان پست :
+            <input class="_inputtext" type="text" name="_title" ng-value="post.title" ng-model="title">
+          </label>
+        </div>
+
+
+        <div class="_formitem">
+          <span class="_label" >عکس شاخص :
+            <a href="{{base_url}}/api/file/{{post.thumb}}" download  ng-hide="hide">{{file_details.name}}</a>
+            <!-- <img style="width:300px;max-height:500px;margin:0 10px;box-shadow:0 0 1px rgba(0,0,0,0.3)" ng-src="{{base_url}}/api/file/{{post.thumb}}" alt=""> -->
+            <button  ng-click="delete_file()" ng-hide="hide" type="button" name="button" class="_inputbutton ---danger">حذف عکس&nbsp;<i style="vertical-align:middle;" class="fa fa-times" aria-hidden="true"></i></button>
+            <input ng-show="show" type="file" id="add_file">
+          </span>
+        </div>
+
+
+        <div class="_formitem">
+          <label class="_label">دسته بندی :
+            <select class="_selectbox" name="_select" ng-model="post.category.id" ng-change="get_cat_id(post.category.id)">
+              <option  ng-repeat="c in cat" ng-value="c.id"  ng-selected="{{c.id == post.category.id }}">{{c.name}}</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="_formitem">
+          <label class="_label" style="display:flex;">متن پست :
+            <textarea class="_textarea" name="_textarea" rows="5" cols="80" ng-value="post.content" ng-model="content"></textarea>
+          </label>
+        </div>
+
+        <div class="_formitem">
+          <label class="_label">تاریخ انتشار :
+            <input class="_inputtext dp1" type="text" name="_date" ng-value="post.publish_at" ng-model="post.publish_at">
+          </label>
+
+        </div>
+
+        <div class="_formitem">
+          <span class="_label">وضعیت :
+            <span>فعال</span>
+            <input class="_radio" type="radio" name="_radio" ng-checked="ActiveStatus" data-status="1">
+            <span>غیرفعال</span>
+            <input class="_radio" type="radio" name="_radio" ng-checked="InActiveStatus" data-status="0">
+          </span>
+        </div>
+
+
+
+
+        <div class="_formitem">
+          <input class="_inputbutton ---success" type="submit" name="_date" value="ثبت ویرایش">
+          <input class="_inputbutton ---danger" type="button" name="_cancel" value="انصراف" ui-sref="admaster.postlist">
+        </div>
+
+      </form>
+    </div>
+
+
+  </div>
+</div>

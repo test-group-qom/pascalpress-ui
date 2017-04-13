@@ -1,0 +1,9 @@
+.flex--panel{
+  width: 98%;
+  padding:10px;
+  margin-top: 60px;
+  direction: rtl;
+}
+.flex--panel .flex--input{
+  width: 40%;
+}

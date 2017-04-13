@@ -1,0 +1,50 @@
+<div class="_content" ng-controller="cateditCtrl">
+  <div class="_content--in">
+
+    <div class="_headerelement">
+      <h3>ویرایش دسته</h3>
+    </div>
+
+    <div class="_form">
+      <form ng-submit='create()'>
+
+        <div class="_formitem">
+          <label class="_label">نام دسته :
+            <input class="_inputtext" type="text" name="_title"  ng-model="title">
+          </label>
+        </div>
+
+        <div class="_formitem">
+          <label class="_label">زیر دسته ها :
+            <select class="_selectbox" name="_select" ng-model="myselect1"  ng-change="add1(myselect1)">
+              <option value="" ng-repeat="c in cat1" ng-model="myoption1" ng-value="{{$index}}">{{c.name}}</option>
+            </select>
+            <select class="_selectbox" name="_select" ng-model="myselect2"  ng-change="add2(myselect2)">
+              <option value="" ng-repeat="c in cat2" ng-model="myoption2" ng-value="{{$index}}">{{c.name}}</option>
+            </select>
+            <select class="_selectbox" name="_select"  ng-model="myselect3" >
+              <option value="" ng-repeat="c in cat3" ng-model="myoption3" ng-value="{{$index}}">{{c.name}}</option>
+            </select>
+            <!-- <select  ng-repeat="select in selects">
+          </select> -->
+
+          <!-- <drop-down cats="{{cat}}"></drop-down> -->
+        </label>
+      </div>
+
+
+
+
+
+
+      <div class="_formitem">
+        <input class="_inputbutton ---primary" type="submit" name="_date" value="ثبت ویرایش">
+        <input class="_inputbutton ---danger" type="button" name="_cancel" value="انصراف" ui-sref="admaster.dashboard">
+      </div>
+
+    </form>
+  </div>
+
+
+</div>
+</div>

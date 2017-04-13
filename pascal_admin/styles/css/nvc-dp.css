@@ -1,0 +1,551 @@
+
+
+
+/*Make a the classes as base classes and split up the props which defines
+the language and direction and aligning to seperate classes and give them to
+the element if nedded.*/
+
+
+
+@font-face {
+    font-family: "yekan";
+    src: url(../fonts/BYekan.woff);
+}
+
+@font-face {
+    font-family: "aller";
+    src: url(../fonts/Aller/Aller_Lt.ttf);
+}
+
+@font-face {
+    font-family: "allerbd";
+    src: url(../fonts/Aller/Aller_Bd.ttf);
+}
+
+.nvc-dp , .nvc-dp * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none !important;
+}
+.dp_input {
+    height: 50px;
+    width: 300px;
+    margin: 20px auto 50px;
+
+}
+
+.nvc-dp {
+    display: none;
+    user-select: none;
+    position: absolute;
+    color: #0D0D0D;
+    font-family: "aller";
+    background-color: #f0f0f0;
+    padding: 0px;
+    width: 215px;
+    min-height: 150px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nvc-cur_date {
+    padding: 5px;
+    height: 40px;
+    display: flex;
+    align-items: stretch;
+    font-family: "allerbd";
+    background-color: #237ba4;
+}
+
+.nvc-cur_date ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nvc-cur_date ul li {
+    font-family: "allerbd";
+    color: #FFF;
+    cursor: default;
+}
+
+.nvc-dp-header {
+    padding: 5px;
+    height: 40px;
+    display: flex;
+    align-items: stretch;
+    background-color: inherit;
+    font-family: "allerbd";
+}
+
+.nvc-dp-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nvc-dp-header ul li {
+    cursor: pointer;
+    height: 18px;
+}
+
+.nvc-year_nav>li:nth-child(2) {
+    width: 38px;
+    overflow: hidden;
+}
+
+.nvc-years_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease;
+}
+
+.nvc-year {
+    width: 38px;
+    text-align: center;
+}
+
+.nvc-month_nav>li:nth-child(2) {
+    width: 75px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nvc-monthes_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease;
+    width: 225px;
+}
+
+.nvc-month {
+    width: 75px;
+    text-align: center;
+}
+
+.nvc-dp-header ul li:nth-child(2) {
+    height: 18px;
+}
+
+.nvc-dp-header ul li:first-child svg {
+    transform: rotate(180deg);
+}
+
+.nvc-dp-header ul li:first-child:hover, .nvc-dp-header ul li:last-child:hover {
+    transform: scale(.8, .8);
+    transition: all .1s linear;
+    cursor: pointer !important;
+}
+
+.nvc-dp-header svg {
+    width: 12px;
+    height: 12px;
+    fill: #237ba4;
+    margin: 0px 2px;
+}
+
+.nvc-week-days {
+    height: 30px;
+    width: 100%;
+    padding: 5px 5px 1px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #520074;
+}
+
+.nvc-week-days ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nvc-week-days ul li {
+    padding: 3px 0px;
+    font-size: 14px;
+    font-weight: bold;
+    width: calc(100% / 7);
+    text-align: center;
+    cursor: default;
+}
+
+.nvc-week-days ul li::after {
+    content: attr(data-nvc-minname);
+}
+
+.nvc-fa-week-days ul li::after {
+    content: attr(data-nvc-minfaname) !important;
+}
+
+.nvc-month-days {
+    padding: 5px;
+    min-height: 150px;
+    background-color: inherit;
+}
+
+.nvc-month-days ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: inherit;
+}
+
+.nvc-month-days ul  .nvc-enable {
+    padding: 5px 0px;
+    font-size: 14px;
+    width: calc(100% / 7);
+    text-align: center;
+    border-radius: 3px;
+    background-color: inherit;
+    border: 1px solid transparent;
+    cursor: default;
+    transition: all .1s linear;
+}
+
+.nvc-month-days ul  .nvc-disable {
+    padding: 5px 0px;
+    font-size: 14px;
+    width: calc(100% / 7);
+    text-align: center;
+    border-radius: 3px;
+    background-color: inherit;
+    border: 1px solid transparent;
+    cursor: default;
+    transition: all .1s linear;
+    opacity: 0.5;
+}
+
+.nvc-month-days ul  .nvc-enable:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+    z-index: 99;
+    background-color: #393939;
+    color: #FFF;
+    font-family: "aller";
+    font-weight: bold;
+}
+
+.nvc-month-days .nvc-active {
+    background: #237ba4 !important;
+    color: white !important;
+    transition: all .1s ease;
+}
+
+.nvc-month-days .nvc-active:hover {
+    background-color: #753AD6;
+    color: white !important;
+    border: 1px solid #0015A2 !important;
+    font-weight: bold;
+}
+
+.nvc-dp-nav {
+    width: 100%;
+    min-height: 20px;
+    background-color: inherit;
+    display: flex;
+    justify-content: center;
+    background-color: #98cce4;
+    padding: 1px;
+}
+
+.nvc-dp-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%
+}
+
+.nvc-dp-nav ul li {
+    font-family: "yekan";
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: #2D0040;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.nvc-dp-nav ul li span {
+    font-size: 12px;
+}
+
+.nvc-dp-nav input[type=radio] {
+    display: none;
+}
+
+.nvc-dp-nav label {
+    display: inline-block;
+    z-index: 9;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    margin: 0px 5px;
+}
+
+.nvc-check_name::after{
+  content: attr(data-nvc-dpname);
+}
+
+.nvc-fa-check_name::after{
+  content: attr(data-nvc-fadpname) !important;
+}
+
+.nvc-check {
+    width: 10px;
+    height: 10px;
+    background-color: #b5e1f5;
+    border: 2px solid #237ba4;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 3px;
+    transition: all .2s linear;
+    position: relative;
+    top: 2px;
+}
+
+.nvc-dp-nav li:hover .nvc-check {
+    border: 2px solid #520074;
+}
+
+.nvc-inside {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+}
+
+.nvc-dp-nav input[type=radio]:checked~.nvc-check .nvc-inside {
+    background-color: #237ba4;
+    transition: all .2s linear;
+    border: 1px solid #FFF;
+}
+
+.nvc-general_select {
+    width: 100%;
+    height: 185px;
+    padding: 5px;
+}
+
+.nvc-general_year, .nvc-general_month {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nvc-general_year ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    flex: 1;
+}
+
+.nvc-general_year ul li {
+    width: calc(100% / 3);
+    height: calc(100% / 4);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-family: "aller";
+    font-size: 18px;
+    padding: 2px;
+    border-collapse: collapse;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.nvc-general_year ul li:hover {
+    background-color: #CEB3FA;
+    color: #520074;
+    font-weight: bold;
+    border: 1px solid #520074;
+}
+
+.nvc-arrow_up, .nvc-arrow_down {
+    height: 20px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nvc-general_year .nvc-arrow_up svg {
+    width: 12px;
+    height: 12px;
+    fill: #520074;
+    margin: 0px 2px;
+    transform: rotate(-90deg);
+}
+
+.nvc-general_year .nvc-arrow_up:hover svg {
+    transform: rotate(-90deg) scale(.8, .8);
+    transition: all .1s linear;
+    cursor: pointer !important;
+}
+
+.nvc-general_year .nvc-arrow_down svg {
+    width: 12px;
+    height: 12px;
+    fill: #520074;
+    margin: 0px 2px;
+    transform: rotate(90deg);
+}
+
+.nvc-general_year .nvc-arrow_down:hover svg {
+    transform: rotate(90deg) scale(.8, .8);
+    transition: all .1s linear;
+    cursor: pointer !important;
+}
+
+.nvc-general_month ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    flex: 1;
+}
+
+.nvc-general_month ul li {
+    width: calc(100% / 3);
+    height: calc(100% / 4);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-family: "aller";
+    font-size: 13px;
+    padding: 2px;
+    border-collapse: collapse;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.nvc-general_month:not(.nvc-fa-general_month) ul li::after{
+  content: attr(data-nvc-fullname);
+}
+
+.nvc-fa-general_month ul li::after{
+  content: attr(data-nvc-fullfaname);
+}
+
+.nvc-general_month ul li:hover {
+    background-color: #CEB3FA;
+    color: #520074;
+    font-weight: bold;
+    border: 1px solid #520074;
+}
+
+.nvc-disable{
+
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+/**
+ * FA Styling
+ */
+
+.nvc-fa-dp {
+    font-family: "yekan" !important;
+    direction: rtl !important;
+}
+
+.nvc-fa-cur_date li {
+    font-family: "yekan" !important;
+    font-weight: bold !important;
+}
+
+.nvc-fa-dp-header {
+    font-family: "yekan" !important;
+    font-weight: bold !important;
+}
+
+.nvc-fa-dp-header ul li:nth-child(2) {
+    height: 24px !important;
+}
+
+.nvc-fa-dp-header ul li:first-child svg {
+    transform: rotate(0deg) !important;
+}
+
+.nvc-fa-dp-header ul li:last-child svg {
+    transform: rotate(180deg) !important;
+}
+
+.nvc-fa-week-days {
+    padding-top: 2px !important;
+}
+
+.nvc-fa-month-days ul .nvc-enable:hover {
+    font-family: "yekan" !important;
+    font-weight: bold !important;
+}
+
+.nvc-fa-month-days ul li{
+    padding: 3px 0px !important;
+}
+
+.nvc-fa-dp-nav {
+    direction: ltr !important;
+}
+
+.nvc-fa-dp-nav ul li {
+    font-family: "yekan" !important;
+    font-weight: bold !important;
+}
+
+.nvc-fa-general_year ul li {
+    font-family: "yekan" !important;
+}
+
+.nvc-fa-general_month ul li {
+    font-family: "yekan" !important;
+    font-size: 16px;
+}
+
+.nvc-fa-general_month ul li:hover {
+    font-weight: bold !important;
+}
+
+
+/*scroll*/

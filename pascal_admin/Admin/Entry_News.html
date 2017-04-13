@@ -1,0 +1,108 @@
+<div class="_content" ng-controller="Entry_NewsCtrl">
+
+  <form ng-submit="create()">
+
+    <div class="_content--in">
+      <div class="_headerelement border-none">
+        <h3>ثبت خبر</h3>
+      </div>
+        
+<!--        <input class="_inputtext" type="text"  ng-model="xani" id="persian.title">
+        <input class="_inputtext" type="button"  ng-model="press" ng-click="test()" id="persian.title">-->
+        
+    <div class="tabs">
+      <ul>
+        <li class="selected">فارسی</li>
+        <li class="">انگلیسی</li>
+        <li class="">عربی</li>
+      </ul>
+    </div>
+
+    <div class="desrcptions">
+      <div class="desrcption" >
+        <div class="_form">
+            <div class="_formitem" >
+              <label class="_label">عنوان خبر :
+                <input class="_inputtext" type="text"  ng-model="persian.title" id="persian.title">
+              </label>
+            </div>
+          </div>
+          <div class="_formitem">
+            <label class="_label" style="display:flex;">خلاصه خبر :
+              <textarea class="_textarea"  ng-model="persian.summary" id="persian.summary" rows="5" cols="80"></textarea>
+            </label>
+            <label class="_label" style="display:flex;">متن خبر:
+              <textarea class="_textarea" ng-model="persian.text" id="persian.text" rows="5" cols="80"></textarea>
+            </label>
+          </div>
+          <div class="_formitem">
+            <label class="_label">برچسب ها :
+              <input class="_inputtext dp1" ng-model="persian.tags" id="persian.tags" type="text" name="_date" >
+            </label>
+          </div>
+        </div>
+
+        <div class="desrcption" >
+          <div class="_form">
+              <div class="_formitem" >
+                <label class="_label">عنوان خبر :
+                  <input class="_inputtext" type="text"  ng-model="English.title2" id="English.title2">
+                </label>
+              </div>
+            </div>
+            <div class="_formitem">
+              <label class="_label" style="display:flex;">خلاصه خبر :
+                <textarea class="_textarea"  ng-model="English.summary2" id="English.summary2" rows="5" cols="80"></textarea>
+              </label>
+              <label class="_label" style="display:flex;">متن خبر:
+                <textarea class="_textarea" ng-model="English.text2" id="English.text2" rows="5" cols="80"></textarea>
+              </label>
+            </div>
+            <div class="_formitem">
+              <label class="_label">برچسب ها :
+                <input class="_inputtext dp1" ng-model="English.tags2" id="English.tags2" type="text" name="_date" >
+              </label>
+            </div>
+          </div>
+
+          <div class="desrcption">
+            <div class="_form">
+                <div class="_formitem" >
+                  <label class="_label">عنوان خبر :
+                    <input class="_inputtext" type="text"  ng-model="Arabic.title3" id="Arabic.title3">
+                  </label>
+                </div>
+              </div>
+              <div class="_formitem">
+                <label class="_label" style="display:flex;">خلاصه خبر :
+                  <textarea class="_textarea"  ng-model="Arabic.summary3" id="Arabic.summary3" rows="5" cols="80"></textarea>
+                </label>
+                <label class="_label" style="display:flex;">متن خبر:
+                  <textarea class="_textarea" ng-model="Arabic.text3" id="Arabic.text3" rows="5" cols="80"></textarea>
+                </label>
+              </div>
+              <div class="_formitem">
+                <label class="_label">برچسب ها :
+                  <input class="_inputtext dp1" ng-model="Arabic.tags3" id="Arabic.tags3" type="text" name="_date" >
+                </label>
+              </div>
+            </div>
+      </div>
+          <div class="_form">
+            <div class="_formitem" >
+              <label class="_label">تصویر خبر :
+                  <input class="_inputbutton" type="file"  >
+              </label>
+            </div>
+          </div>
+        <input type="hidden" ng-model="picture" id="picture">
+            <button type="submit" class="submit"  name="button">ارسال</button>
+    </div>
+
+  </form>
+
+</div>
+
+
+</div>
+</div>

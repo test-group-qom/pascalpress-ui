@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="pascalpress" lang="{{ lang }}">
+  <head>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title translate="pascalpress">pascalpress</title>
+    <!-- <base href="/"> -->
+
+    <!-- links -->
+    <link rel="stylesheet" href="styles/css/simplePagination.css">
+    <link rel="stylesheet" href="styles/css/flickity.css">
+    <link rel="stylesheet" href="styles/css/Humber.css">
+    <link rel="stylesheet" href="styles/css/easyzoom.css">
+    <link rel="stylesheet" href="styles/css/import.css">
+    <link ng-href="styles/css/{{ default_direction }}-app.css" rel="stylesheet">
+
+
+    <!-- core scripts -->
+
+    <script src="scripts/pascalpress/vendor/angular/angular.min.js"></script>
+    <script src="scripts/pascalpress/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="scripts/pascalpress/vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="scripts/pascalpress/vendor/angular-sanitize/angular-sanitize.js"></script>
+    <script src="scripts/pascalpress/vendor/angular-ui-router-styles/ui-router-styles.js"></script>
+    <script src="scripts/pascalpress/vendor/oclazyload/dist/ocLazyLoad.js"></script>
+    <script src="scripts/pascalpress/vendor/flickity/flickity.pkgd.min.js"></script>
+    <script src="scripts/pascalpress/module.js"></script>
+    <script src="scripts/pascalpress/router.js"></script>
+    <script src="scripts/pascalpress/vendor/flickity/flickity.pkgd.min.js"></script>
+    <script src="scripts/pascalpress/vendor/easyzoom.js"></script>
+    <!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
+    <script src="pascal_admin/js/menu.js"></script>
+    <script src="scripts/pascalpress/vendor/bower_components/angular-translate/angular-translate.js"></script>
+    <script src="scripts/pascalpress/vendor/bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+    <script src="scripts/pascalpress/vendor/bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+    <script src="scripts/pascalpress/vendor/bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
+    <script src="scripts/pascalpress/vendor/bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="scripts/pascalpress/vendor/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="scripts/pascalpress/vendor/jquery.simplePagination.js"></script>
+    <script src="scripts/pascalpress/app.js"></script>
+
+    <!-- controller -->
+
+    <script src="scripts/pascalpress/controller/index/slider.js"></script>
+    <script src="scripts/pascalpress/controller/single/print.js"></script>
+    <script src="scripts/pascalpress/controller/single/desrcption.js"></script>
+    <script src="scripts/pascalpress/controller/product/Nav_Slider.js"></script>
+    <script src="scripts/pascalpress/controller/product/slider2.js"></script>
+    <script src="scripts/pascalpress/controller/product/media.js"></script>
+    <script src="scripts/pascalpress/controller/contact/Map.js"></script>
+    <script src="scripts/pascalpress/controller/News/items.js"></script>
+    <script src="scripts/pascalpress/controller/single/news/item.js"></script>
+    <script src="scripts/pascalpress/controller/single/aricals/item.js"></script>
+    <script src="scripts/pascalpress/controller/News/translate.js"></script>
+    <script src="scripts/pascalpress/controller/single/input.js"></script>
+    <script src="scripts/pascalpress/controller/articals/articals.js"></script>
+
+    <!--admin controller -->
+
+    <script src="pascal_admin/controller/header/header.js"></script>
+    <script src="pascal_admin/controller/header/Entry_News.js"></script>
+    <script src="pascal_admin/controller/postcreate/postcreate.js"></script>
+    <script src="pascal_admin/controller/postlist/postlist.js"></script>
+    <script src="pascal_admin/controller/listNews/list.js"></script>
+    <script src="pascal_admin/controller/listProduct/listproduct.js"></script>
+    <script src="pascal_admin/controller/product_create/postcreate.js"></script>
+    <script src="pascal_admin/controller/news_list_edit/news_list_edit.js"></script>
+    <script src="pascal_admin/controller/atrical_list/atrical_list.js"></script>
+    <script src="pascal_admin/controller/artical_list_edit/artical_list_edit.js"></script>
+    <script src="pascal_admin/controller/Authenticated/login.js"></script>
+    <script src="pascal_admin/controller/Authenticated/signup.js"></script>
+
+
+  </head>
+  <body ui-router-styles>
+
+
+<div class="">
+
+
+  <ui-view name="header"></ui-view>
+  <ui-view name="menu_top"></ui-view>
+  <ui-view name="container"></ui-view>
+  <ui-view name="footer"></ui-view>
+</div>
+  <div class="admin-page">
+    <div class="admin_right _right">
+      <ui-view name="adsidebar"></ui-view>
+    </div>
+    <div class="admin_left _left">
+      <ui-view name="adheader"></ui-view>
+      <ui-view name="adcontent"></ui-view>
+      <ui-view name="adfooter"></ui-view>
+    </div>
+  </div>
+
+  </body>
+</html>

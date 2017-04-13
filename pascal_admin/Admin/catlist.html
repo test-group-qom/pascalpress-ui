@@ -1,0 +1,41 @@
+<div class="_content" ng-controller="catlistCtrl">
+  <div class="_content--in">
+
+    <div class="_headerelement">
+      <h3>لیست دسته ها</h3>
+    </div>
+
+    <div class="_tableElement">
+      <table>
+        <thead>
+          <tr colspan="3">
+            <th > #</th>
+            <th >عنوان دسته</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr ng-repeat="cats in allCat ">
+            <td class="_PersianNumber">{{($index+1)}}</td>
+            <td ><span ng-click="show($index)">{{cats.name}}</span></td>
+            <!-- <td>
+            <span style="cursor:pointer;" ng-repeat="child in pcats" >
+              <a ng-click="show(cats.childs)">{{child.name}}</a>
+            </span>
+            <span>&nbsp;</span>
+            </td> -->
+            <td>
+              <span ui-sref="admaster.catedit({id:cats.id})" class="_posticon"><i id="_posticon---edit" class="fa fa-pencil-square-o" ></i></span>
+              <span ng-click="delete(cats.id)" class="_posticon"><i  id="_posticon---delete" class="fa fa-times"></i></span>
+              <span ng-show="cats.parent_id != 0" ng-click="back(cats.parent_id,allCat)" class="_posticon"><i  id="_posticon---back" class="fa fa-backward"></i></span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+</div>

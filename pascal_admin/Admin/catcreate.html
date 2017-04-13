@@ -1,0 +1,36 @@
+<div class="_content" ng-controller="catcreateCtrl">
+  <div class="_content--in">
+
+    <div class="_headerelement">
+      <h3>ایجاد دسته جدید</h3>
+    </div>
+
+    <div class="_form">
+      <form ng-submit='create()'>
+
+        <div class="_formitem">
+          <label class="_label">نام دسته :
+            <input class="_inputtext" type="text" name="_title"  ng-model="name">
+          </label>
+        </div>
+
+        <div class="_formitem">
+          <label class="_label">انتخاب سر دسته :
+            <select class="_selectbox" name="_select" ng-model="myselect1"  ng-change="add1(myselect1)">
+              <option value="" ng-repeat="c in cat1" ng-model="myoption1" ng-value="{{c.id}}">{{c.name}}</option>
+            </select>
+          </label>
+        </div>
+
+
+        <div class="_formitem">
+          <input class="_inputbutton ---primary" type="submit" name="_date" value="ایجاد دسته">
+          <input class="_inputbutton ---danger" type="button" name="_cancel" value="انصراف" ui-sref="admaster.dashboard">
+        </div>
+
+      </form>
+    </div>
+
+
+  </div>
+</div>

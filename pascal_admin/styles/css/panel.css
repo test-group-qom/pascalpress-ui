@@ -1,0 +1,505 @@
+@font-face {
+  font-family: 'IRANSansWeb';
+  src: url("../fonts/IRANSansWeb.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IRANSansWeb_Bold';
+  src: url("../fonts/IRANSansWeb_Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IRANSansWeb_Light';
+  src: url("../fonts/IRANSansWeb_Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IRANSansWeb_Medium';
+  src: url("../fonts/IRANSansWeb_Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IRANSansWeb_UltraLight';
+  src: url("../fonts/IRANSansWeb_UltraLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BYekan';
+  src: url("../fonts/BYekan.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  margin: 0;
+  direction: rtl;
+  font-family: 'IRANSansWeb_Medium';
+}
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+.admin_clearfix::after{
+  clear:both;
+  content:'';
+  display: block;
+}
+._left{
+  float: left;
+}
+._right{
+  float: right;
+}
+.admin_right{
+
+  width: 20%;
+}
+.admin_left{
+  width: 80%;
+
+}
+._sidebar {
+  position: fixed;
+  overflow: auto;
+  background: url('../imgs/hatter2.jpg');
+  background-color: #2b2b2b;
+  background-blend-mode: screen;
+  width: 20%;
+  height: 100%;
+  border-left: 2px solid white;
+  /*border: 3px solid #f1f1f1;*/
+
+}
+._header{
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(244,244,244,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(244,244,244,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(244,244,244,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-bottom: 2px solid white;
+}
+._hader--content{
+  padding: 20px 20px;
+}
+._hader--content--head{
+  display: flex;
+}
+._hader--content--headitem{
+  margin: 0 10px;
+}
+._hader--content--headitem .hlink{
+  font-family: 'IRANSansWeb_UltraLight';
+  font-weight: bold;
+  color: #aaa;
+  font-size: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+._hader--content--headitem .hlink:hover{
+  color:rgb(19, 134, 224);
+}
+._sidebar--content{
+  padding: 15px;
+}
+._content {
+  width: 100%;
+  /*height: 100%;
+  position: fixed;*/
+}
+._content--in{
+  padding: 30px;
+}
+._profile--circle{
+  width: 100px;
+  height: 100px;
+  background: #ffffff;
+  border-radius: 100px;
+  border: 2px solid #1386e0;
+  margin: auto;
+}
+._profile--name{
+  text-align: center;
+  margin: 15px 0;
+  font-size: 16px;
+  color:#9e9e9e;
+}
+
+._line hr{
+  border: 1px solid #cecece;
+}
+._menu--ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+._menu--ul > li{
+  display: block;
+  margin: 10px 0;
+}
+._menu--ul > li > ._link{
+  background: rgba(0, 0, 0, 0.08);
+  width: 100%;
+  display: block;
+  padding: 5px 5px;
+  color: rgb(19, 134, 224);
+  border-right: 4px solid rgb(19, 134, 224);
+  text-align: center;
+  color: #676767;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+._menu--ul > li > ._link:hover{
+  background: rgb(19, 134, 224);
+  color: white;
+}
+._menu--ul--subul{
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+._menu--ul--subul > li{
+  display: block;
+  margin: 5px 0;
+}
+._menu--ul--subul > li > ._sublink{
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  color: #9a9a9a;
+  background: rgba(255, 255, 255, 0.44);
+  border-radius: 2px;
+  padding: 2px 0;
+  transition: all 0.2s ease-out;
+}
+._menu--ul--subul > li > ._sublink:hover{
+  background: rgba(0, 0, 0, 0.1);
+  color:#555;
+}
+
+._headerelement{
+  font-family: 'IRANSansWeb_UltraLight';
+  text-align: center;
+  margin: 5px 0;
+  padding: 0 0 10px 0;
+  color: #969696;
+  border-bottom: 2px solid #efefef;
+}
+._headerelement h1,
+._headerelement h2,
+._headerelement h3,
+._headerelement h4,
+._headerelement h5,
+._headerelement h6{
+  margin: 0;
+  padding: 0;
+}
+
+._tableElement table{
+  border-collapse: collapse;
+  border-radius: 3px;
+  width: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+  background: #fbfbfb;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+._tableElement thead th{
+  padding: 10px 0;
+  border-bottom: 1px solid #d4d4d4;
+  color:#4a4a4a;
+}
+._tableElement thead tr{
+  box-shadow: inset 0 0 60px 0px rgba(142, 142, 142, 0.28);
+}
+._tableElement tbody tr{
+  transition: all 0.2s ease;
+}
+._tableElement tbody tr:hover{
+  background: rgba(255,255,255,0.1) !important;
+}
+._tableElement tbody tr:nth-child(even){
+  background: #e2e2e2;
+}
+._tableElement tbody tr:nth-child(odd){
+  background: #eee;
+}
+._tableElement tbody td{
+  padding: 5px 0;
+  font-size: 14px;
+  color:#6d6d6d;
+}
+._menuActive{
+  background: rgb(19, 134, 224) !important;
+  color: white !important;
+}
+._submenuActive{
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: #555 !important;
+}
+._posticon{
+  margin: 0 5px;
+}
+._posticon i{
+  font-size: 17px;
+  cursor: pointer;
+}
+#_posticon---delete:hover{
+  color:#e22626;
+}
+#_posticon---edit:hover{
+  color:#20b370;
+}
+#_posticon---back:hover{
+  color:#1386e0;
+}
+._pagination{
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+._button{
+  outline: none;
+  border: none;
+  padding: 3px 10px;
+  vertical-align: middle;
+  border-radius: 2px;
+  background: #969696;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+._button:active{
+  background: #1386e0;
+}
+._pagination button{
+  margin: 5px 3px;
+}
+.Active{
+  background: #1386e0 !important;
+  color: white !important;
+}
+._formitem{
+  margin: 20px 0;
+}
+._label{
+  font-family: 'IRANSansWeb_Light';
+  display: block;
+  margin: 5px 0;
+  border-right: 2px solid #1386e0;
+  background: #fbfbfb;
+  padding: 5px 10px;
+
+}
+._radio{
+  vertical-align: middle;
+}
+._inputtext,._selectbox,._textarea{
+  font-family: 'IRANSansWeb_UltraLight';
+  margin: 0px 5px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 5px 10px;
+  color:#333;
+  transition: all 0.3s ease-out;
+}
+._inputtext:focus,._selectbox:focus,._textarea:focus{
+  border: 1px solid rgb(19, 134, 224);
+}
+._inputbutton{
+  font-family: 'IRANSansWeb_Light';
+  padding: 1px 20px;
+  border: none;
+  color:#676767;
+  border-radius: 3px;
+  border:1px solid white;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.---default{
+  background: #eaeaea;
+  color:#676767;
+  border: 1px solid white;
+}
+.---default:hover{
+  border:1px solid #eaeaea;
+  background: white;
+  color:#676767;
+}
+
+.---success{
+  background: #13ca7e;
+  color:white;
+  border:1px solid white;
+}
+.---success:hover{
+  border:1px solid #13ca7e;
+  background: white;
+  color: #13ca7e;
+}
+
+.---danger{
+  background: #ea1331;
+  color:white;
+  border:1px solid white;
+}
+.---danger:hover{
+  border:1px solid #ea1331;
+  background: white;
+  color: #ea1331;
+}
+
+.---warning{
+  background: #f3d500;
+  color: white;
+  border: 1px solid white;
+}
+.---warning:hover{
+  border:1px solid #f3d500;
+  background: white;
+  color: #f3d500;
+}
+
+.---primary{
+  background: #1386e0;
+  color:white;
+  border:1px solid white;
+}
+.---primary:hover{
+  border:1px solid #1386e0;
+  background: white;
+  color: #1386e0;
+}
+._PersianNumber{
+  font-family: 'BYekan';
+  font-weight:bold;"
+}
+._inputfile{
+  cursor: pointer;
+  font-family: inherit;
+  color: grey;
+}
+._content--in .tabs{
+  width: 100%;
+  cursor: default;
+}
+._content--in .tabs li{
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+  /*border-left: solid 1px #7b818d;*/
+  font-family: "IRANSansWeb";
+  font-size: 16px;
+  cursor: pointer;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  transition: all 120ms ease-in;
+}
+._content--in .tabs li:last-of-type{
+  border: none;
+}
+._content--in .tabs li.selected{
+  background: #f7c300;
+  transition: all 120ms ease-in;
+  color: #26324a;
+}
+._content--in .desrcptions{
+  width: 100%;
+  border: solid 1px #ccc;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+._content--in .desrcption{
+  width: 100%;
+  display: none;
+}
+._content--in .desrcption:first-child{
+  display: block;
+}
+.border-none{
+  border: none !important;
+}
+.icon--edit{
+  width: 20px;
+  height: 20px;
+}
+.icon--deleted{
+  width: 20px;
+  height: 20px;
+}
+.M_flex--parent{
+  display: flex;
+  width: 100%;
+  align-items:flex-start;
+  flex-direction: column;
+}
+.M_flex--parent .M_item{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.M_item .flex--right{
+  display: flex;
+  width: 322px;
+  word-break: break-all;
+  margin-left: 17px;
+  margin-bottom: 15px;
+  flex-direction: column;
+}
+.M_item .flex--right:last-of-type{
+  margin-left: 0px;
+}
+.M_item .flex--title{
+  display: flex;
+  width: 100%;
+}
+.M_item .flex--title .title{
+  font-family: "IRANSansWeb";
+  font-size: 16px;
+  color: #2e2e2e;
+  width: 100%;
+  cursor: default;
+}
+.M_item .flex--summary{
+  width: 100%;
+  display: flex;
+}
+.M_item .flex--summary .desrcption{
+  width: 100%;
+  font-family: "IRANSansWeb";
+  font-size: 18px;
+  color: #2e2e2e;
+  cursor: default;
+}
+.M_item .flex--right .input{
+  font-family: "IRANSansWeb";
+  font-size: 16px;
+  color: #2e2e2e;
+  width: 100%;
+  cursor: default;
+  padding:8px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}

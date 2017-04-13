@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="pascal_admin/styles/css/Authenticated.css">
+  </head>
+  <body>
+    <div class="flex--panel" ng-controller="LoginCtrl">
+        <div class="flex--inputs">
+          <form ng-submit="login()">
+              <div class="flex--input">
+                <input type="text" class="input" ng-model="Email" id="Email" placeholder="ایمیل" name="" value="">
+              </div>
+              <div class="flex--input">
+                <input type="password" class="input" ng-model="password" id="password" placeholder="پسورد " name="" value="">
+              </div>
+              <!-- <textarea name="name" placeholder="متن نظر" class="textarea" rows="8" cols="80"></textarea> -->
+              <button type="submit" class="submit" name="button">ورود</button>
+          </form>
+
+        </div>
+    </div>
+  </body>
+</html>

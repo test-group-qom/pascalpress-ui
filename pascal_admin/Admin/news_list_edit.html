@@ -1,0 +1,41 @@
+<div class="_content" ng-controller="usereditCtrl">
+  <div class="_content--in">
+
+    <div class="_headerelement">
+      <h3>ویرایش</h3>
+    </div>
+    <div class="_form" >
+      <form  class="M_flex--parent" ng-submit="submit()">
+          <div class="_formitem M_item" >
+              <div class="flex--right" ng-repeat="label in labels">
+                          <div class="flex--title">
+                              <input type="text" ng-model="label.title" name="label.title" class="input" ng-value="label.title">
+                          </div>
+                          <div class="flex--summary">
+                              <input type="text" name="" ng-model="label.summary" class="input"  ng-value="label.summary">
+                          </div>
+              </div>
+          </div>
+
+
+<!--
+        <div class="_formitem">
+          <span class="_label">وضعیت :
+            <span>فعال</span>
+            <input class="_radio" type="radio" name="_statusradio" ng-checked="ActiveStatus">
+            <span>غیرفعال</span>
+            <input class="_radio" type="radio" name="_statusradio" ng-checked="InActiveStatus">
+          </span>
+        </div> -->
+        <div class="_formitem" >
+          <input class="_inputbutton ---success"  type="submit"  name="_date"  value="ثبت ویرایش">
+          <input class="_inputbutton ---danger"  type="button"  name="_cancel" value="انصراف" ui-sref="admaster.news_list">
+        </div>
+      </form>
+
+
+    </div>
+
+
+  </div>
+</div>
